@@ -1,0 +1,42 @@
+<nav id="top-nav">
+    <img id="img-empresa">
+    <a href="/worker">Tareas</a>
+    <a href="/projects">Proyectos</a>
+    <button (click)="logout()">Logout</button>
+</nav>
+
+
+<div class="vacio" *ngIf="projects.length == 0; else main_content">
+    <h1>No hay proyectos asignados para ti</h1>
+</div>
+
+<ng-template #main_content>
+    <div class="cantainer">
+        <div class="card" *ngFor="let project of projects">
+            <div class="card-title">
+                <h2>{{project.nombre}}</h2>
+            </div>
+            <div class="card-description">
+                <p>{{project.descripcion}}</p>
+            </div>
+            <div class="card-container">
+                <div class="tasks"*ngFor="let task of tareasAsginadas">
+                    <div class="title" [ngStyle]="{'color': task.completado ? '#F00' : '#FFF' }">
+                        <h4>{{task.nombreTarea}}</h4>
+                    </div>
+                    <div class="description" [ngStyle]="{'color': task.completado ? '#F00' : '#FFF' }">
+                        <p>{{task.descripcion}}</p>
+                    </div>                   
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="users" *ngFor="let worker of empleadosAsginados">
+                    <div class="info">
+                        <h4 class="name">{{worker.nombre}}</h4>
+                        <p class="email">{{worker.email}}</p>
+                    </div>
+                </div>
+            </div>           
+        </div>
+    </div>
+</ng-template>

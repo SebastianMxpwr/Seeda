@@ -1,6 +1,8 @@
 const Empleado = require('../models/empleado')
 const bcrypt = require('bcrypt-nodejs')
 const jwt = require('../libs/jwt')
+const logger = require('../libs/logger')
+
 
 const obtenerTodosEmpleados = async (req, res) => {
 
@@ -11,6 +13,7 @@ const obtenerTodosEmpleados = async (req, res) => {
             msg: 'No hay empleados'
         })
     }else{
+        logger.info(`Empleados obtenidos ${empleados}`)
         res.status(200).send({
             msg: 'Obtenidos con exito',
             cont: empleados
@@ -56,6 +59,7 @@ const registroEmpleado = async(req, res)=>{
                 if(hash){
                     body.contrasena = hash
                     const reg = await Empleado.create(body)
+                    logger.info(`Empleados obtenidos ${reg}`)
                     res.status(200).send({
                         msg:'Empleado Creado',
                         res: reg
@@ -76,7 +80,7 @@ const registroEmpleado = async(req, res)=>{
 
 const loginEmpleado = async(req,res)=>{
     let body = req.body
-
+    console.log(body);
     const EmpleadoEncontrado = await Empleado.findOne({email: body.email})
 
     if(!EmpleadoEncontrado){
@@ -86,6 +90,7 @@ const loginEmpleado = async(req,res)=>{
     }else{
         bcrypt.compare(body.contrasena, EmpleadoEncontrado.contrasena, async(err, check)=>{
             if(check){
+                logger.info(`Empleados obtenidos ${EmpleadoEncontrado}`)
                 res.status(200).send({
                     data: EmpleadoEncontrado,
                     jwt: jwt.creaToken(EmpleadoEncontrado)
@@ -156,6 +161,7 @@ const eliminarEmpleado = async (req,res) => {
                status: 400
            })
        }else{
+        logger.info(`Empleados obtenidos ${empleadoEncontradoEliminado}`)
            res.status(200).send({
                ok: true,
                msg: 'Exito al eliminar el emleado',

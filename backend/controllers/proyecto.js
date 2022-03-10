@@ -27,7 +27,7 @@ const obtenerProyectos = async (req, res) =>{
     }
 }
 
-const obtenerProyectosyTareasPorUsuario = async (req, res) =>{
+const obtenerProyectosPorUsuario = async (req, res) =>{
 
     let idUsuario = req.params.idUsuario
     
@@ -37,39 +37,40 @@ const obtenerProyectosyTareasPorUsuario = async (req, res) =>{
         })
     }
 
-    const existenciaEnProyecto = await Proyecto.findOne({empladosAsignados: idUsuario})
+    const existenciaEnProyecto = await Proyecto.find({empladosAsignados: idUsuario, completado: false})
+    .populate('empladosAsignados')
+    .populate('tareasAsginadas')
 
-    if(!existenciaEnProyecto){
+    if(existenciaEnProyecto.length == 0){
         res.status(404).send({
-            msg: 'No esta en este proyecto (mostrar este error o no)'
+            msg: 'No esta en ningun proyecto'
         })
     }else{
-
-        const tareasAsignadasAlUsuario = await Tarea.find({asignacion: idUsuario}).populate('asignacion')
-        if(tareasAsignadasAlUsuario.length == 0){
-            res.status(404).send({
-                msg: 'No hay tareas asignadas para ti'
-            })
-        }else{
-            let temp = []
-            for (let i = 0; i < tareasAsignadasAlUsuario.length; i++) {
-                const tareaEnProyecto = await Proyecto.findOne({tareasAsginadas: tareasAsignadasAlUsuario[i]._id}).populate('tareasAsginadas')
-                if(tareaEnProyecto){
-                    temp.push(tareaEnProyecto.tareasAsginadas)
-                }
-                console.log(temp);
-            }
-            if(temp.length == 0){
-                res.status(404).send({
-                    msg: 'No hay tareas asignadas para ti'
-                })
-            }else{
-                res.status(200).send({
-                    msg: 'Tareas asignadas para ti',
-                    cont: temp
-                })
-            }
+        const tasks = []
+        const employees = []
+        for (let i = 0; i < existenciaEnProyecto.length; i++) {
+           for (let j = 0; j < existenciaEnProyecto[i].tareasAsginadas.length; j++) {
+            tasks.push(existenciaEnProyecto[i].tareasAsginadas[j]);
+               
+           }
         }
+
+        for (let i = 0; i < existenciaEnProyecto.length; i++) {
+           for (let j = 0; j < existenciaEnProyecto[i].empladosAsignados.length; j++) {
+               employees.push(existenciaEnProyecto[i].empladosAsignados[j])
+ 
+           }  
+        }
+       
+        
+        res.status(200).send({
+            msg: 'Proyectos asignados',
+            cont: existenciaEnProyecto,
+            cont2: tasks,
+            cont3: employees
+        })
+
+        
     }
 }
 
@@ -147,7 +148,8 @@ const completarProyecto = async (req, res)=>{
         })
     }
 
-    const proyectoEditado = await Proyecto.findByIdAndUpdate(id,{Editado: true},{new:true})
+    console.log(id);
+    const proyectoEditado = await Proyecto.findByIdAndUpdate(id,{completado: true},{new:true})
     if(!proyectoEditado){
         res.status(500).send({
             msg: 'No se pudo completar el proyecto intente de nuevo'
@@ -199,6 +201,7 @@ const eliminarProyecto = async (req, res)=>{
             msg: 'No se pudo eliminar el proyecto intente de nuevo'
         })
     }else{
+        logger.info(`Empleados obtenidos ${proyectoEliminado}`)
         res.status(200).send({
             msg: 'Exito al eliminar'
         })
@@ -207,7 +210,7 @@ const eliminarProyecto = async (req, res)=>{
 
 module.exports = {
     obtenerProyectos,
-    obtenerProyectosyTareasPorUsuario,
+    obtenerProyectosPorUsuario,
     agregarProyectos,
     completarProyecto,
     editarProyecto,

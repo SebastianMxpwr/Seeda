@@ -1,0 +1,14 @@
+<div id="caca">
+    <div class="glass">
+        <div class="wrapper">
+            <div class="container">
+                <h1>Bienvenido</h1>
+                
+                <form #loginform="ngForm" (ngSubmit)="login_Component(loginform)" class="form">
+                    <input type="text" name="email" [(ngModel)]="user.email" placeholder="Email">
+                    <input type="password" name="contrasena" [(ngModel)]="user.contrasena" ngModel  required placeholder="Contraseña">
+                    <button type="submit" id="login-button">Login</button>
+                </form>
+            </div>
+    </div>
+</div>

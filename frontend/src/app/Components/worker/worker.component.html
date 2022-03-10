@@ -1,0 +1,29 @@
+<nav id="top-nav">
+    <img id="img-empresa">
+    <a href="/worker">Tareas</a>
+    <a href="/projects">Proyectos</a>
+    <button (click)="logout()">Logout</button>
+</nav>
+
+<div class="vacio" *ngIf="tasks.length == 0; else main_content">
+    <h1>No hay tareas por ahora, buen trabajo</h1>
+</div>
+
+
+<ng-template #main_content>
+    <div class="container">
+        <div class="card" *ngFor="let task of tasks">
+            <div class="card-title">
+                <p>{{task.nombreTarea}}</p>
+            </div>
+            <div class="card-desription">
+                <p>{{task.descripcion}}</p>
+            </div>
+            <div class="buttons">
+                <button (click)="completeTaskC(task._id)">Completar<i class="fa-solid fa-circle-check"></i></button>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+

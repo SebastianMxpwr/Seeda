@@ -1,4 +1,5 @@
 require('./config/config')
+const logger = require('./libs/logger')
 const mongoose = require('mongoose');
 const express = require('express');
 const morgan = require('morgan');
@@ -27,11 +28,11 @@ mongoose.connect(process.env.URLBD,{
     useUnifiedTopology: true
 }, (err)=>{
     if (err) throw err
-    console.log(`Base de datos online en: ${process.env.URLBD}`)
+    logger.info(`Base de datos online en: ${process.env.URLBD}`)
 })
 
 app.listen(process.env.PORT,()=>{
-    console.log(`Escuchando en el puerto ${process.env.PORT}`);
+    logger.info(`Escuchando en el puerto ${process.env.PORT}`);
 })
 
 module.exports = app

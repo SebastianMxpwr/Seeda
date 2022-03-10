@@ -1,0 +1,97 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
+
+
+
+#caca {
+  width: 98vw;
+  height: 98vh;
+  background: url("https://digital-interactiva.com/pluginfile.php/27/block_mb2slider/content/avel-chuklanov-DUmFLtMeAbQ-unsplash.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+  font-weight: 300;
+}
+
+.glass{
+    position: relative;
+    top: 10%;
+    border-radius:25px;
+    width: 75%;
+    height: 80%;
+    margin: 0 auto;
+    background-color: #ffffff10;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); ;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 120px 0;
+  height: 400px;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+form {
+  padding: 20px 0;
+  position: relative;
+  z-index: 2;
+}
+
+button {
+  appearance: none;
+  outline: 0;
+  background-color: white;
+  border: 0;
+  padding: 10px 15px;
+  color: #53e3a6;
+  border-radius: 3px;
+  width: 250px;
+  cursor: pointer;
+  font-size: 18px;
+  transition-duration: 0.25s;
+}
+
+button:hover {
+  background-color: rgb(245, 247, 249);
+}
+
+input {
+  display: block;
+  appearance: none;
+  outline: 0;
+  border: 1px solid rgba(245, 247, 249, 0.603);
+  background-color: rgba(245, 247, 249, 0.801);
+  width: 250px;
+
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+
+  color: rgb(3, 3, 3);
+
+  transition-duration: 0.25s;
+  font-weight: 300;
+}
+
+input:focus {
+  background-color: rgba(245, 247, 249, 0.603);
+  width: 300px;
+}
+
+input:hover {
+  background-color: white;
+  
+
+  color: #53e3a6;
+}

@@ -1,0 +1,593 @@
+info: Escuchando en el puerto 3000
+info: Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-08T01:45:38.474Z] info Escuchando en el puerto 3000
+[2022-03-08T01:45:38.493Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-08T01:47:02.266Z] info Escuchando en el puerto 3000
+[2022-03-08T01:47:02.288Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-08T01:47:13.578Z] info Escuchando en el puerto 3000
+[2022-03-08T01:47:13.597Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-08T01:47:50.477Z] info {
+  _id: new ObjectId("6225342539f90768430e2bac"),
+  nombre: 'ElPepe',
+  email: 'test1@gmail.com',
+  contrasena: '$2a$10$HcIAWwJgRLegKyuwXInj0e1PBkFVXJaP56IpxzQXSOYdLiMwjDe1S',
+  edad: '23',
+  cargo: 'Nepe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:22:29.155Z,
+  updatedAt: 2022-03-06T22:22:29.155Z,
+  __v: 0
+},{
+  _id: new ObjectId("622534a239f90768430e2bb3"),
+  nombre: 'ElPepe2',
+  email: 'test2@gmail.com',
+  contrasena: '$2a$10$PA.uyclmplAQRgRjVEiN2OEe19G3EMJpcbN9oiYgFq/0J.CInkRb2',
+  edad: '23',
+  cargo: 'sabe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:24:34.015Z,
+  updatedAt: 2022-03-06T22:24:34.015Z,
+  __v: 0
+},{
+  _id: new ObjectId("622534a839f90768430e2bb6"),
+  nombre: 'ElPepe3',
+  email: 'test3@gmail.com',
+  contrasena: '$2a$10$xybiB/IjR6dky3A0ey1GZeSKXwBwXZuEdK4IQvRfkgkd7IGdGxZ22',
+  edad: '23',
+  cargo: 'sabe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:24:40.730Z,
+  updatedAt: 2022-03-06T22:24:40.730Z,
+  __v: 0
+},{
+  _id: new ObjectId("622534af39f90768430e2bb9"),
+  nombre: 'Pepe2',
+  email: 'test2@test.com',
+  contrasena: '1235',
+  edad: '23',
+  cargo: 'Nepe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:24:47.159Z,
+  updatedAt: 2022-03-06T22:26:46.140Z,
+  __v: 0
+},{
+  _id: new ObjectId("62253b53642b40e4fc25929c"),
+  nombre: 'ElPepe6',
+  email: 'test6@gmail.com',
+  contrasena: '$2a$10$TadgJDGtinrJJ68S5DFeWuQm3vWtdO1lvQGLybD.W2T0f6d4R2LM.',
+  edad: '23',
+  cargo: 'sabe2',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:53:07.824Z,
+  updatedAt: 2022-03-06T22:53:07.824Z,
+  __v: 0
+}
+[2022-03-08T01:48:50.083Z] info Escuchando en el puerto 3000
+[2022-03-08T01:48:50.110Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-08T01:49:03.690Z] info Empleados obtenidos {
+  _id: new ObjectId("6225342539f90768430e2bac"),
+  nombre: 'ElPepe',
+  email: 'test1@gmail.com',
+  contrasena: '$2a$10$HcIAWwJgRLegKyuwXInj0e1PBkFVXJaP56IpxzQXSOYdLiMwjDe1S',
+  edad: '23',
+  cargo: 'Nepe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:22:29.155Z,
+  updatedAt: 2022-03-06T22:22:29.155Z,
+  __v: 0
+},{
+  _id: new ObjectId("622534a239f90768430e2bb3"),
+  nombre: 'ElPepe2',
+  email: 'test2@gmail.com',
+  contrasena: '$2a$10$PA.uyclmplAQRgRjVEiN2OEe19G3EMJpcbN9oiYgFq/0J.CInkRb2',
+  edad: '23',
+  cargo: 'sabe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:24:34.015Z,
+  updatedAt: 2022-03-06T22:24:34.015Z,
+  __v: 0
+},{
+  _id: new ObjectId("622534a839f90768430e2bb6"),
+  nombre: 'ElPepe3',
+  email: 'test3@gmail.com',
+  contrasena: '$2a$10$xybiB/IjR6dky3A0ey1GZeSKXwBwXZuEdK4IQvRfkgkd7IGdGxZ22',
+  edad: '23',
+  cargo: 'sabe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:24:40.730Z,
+  updatedAt: 2022-03-06T22:24:40.730Z,
+  __v: 0
+},{
+  _id: new ObjectId("622534af39f90768430e2bb9"),
+  nombre: 'Pepe2',
+  email: 'test2@test.com',
+  contrasena: '1235',
+  edad: '23',
+  cargo: 'Nepe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:24:47.159Z,
+  updatedAt: 2022-03-06T22:26:46.140Z,
+  __v: 0
+},{
+  _id: new ObjectId("62253b53642b40e4fc25929c"),
+  nombre: 'ElPepe6',
+  email: 'test6@gmail.com',
+  contrasena: '$2a$10$TadgJDGtinrJJ68S5DFeWuQm3vWtdO1lvQGLybD.W2T0f6d4R2LM.',
+  edad: '23',
+  cargo: 'sabe2',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:53:07.824Z,
+  updatedAt: 2022-03-06T22:53:07.824Z,
+  __v: 0
+}
+[2022-03-08T01:51:50.778Z] info Escuchando en el puerto 3000
+[2022-03-08T01:51:50.804Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-08T01:52:39.174Z] info Escuchando en el puerto 3000
+[2022-03-08T01:52:39.192Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-08T02:41:25.301Z] info Empleados obtenidos {
+  _id: new ObjectId("6225342539f90768430e2bac"),
+  nombre: 'ElPepe',
+  email: 'test1@gmail.com',
+  contrasena: '$2a$10$HcIAWwJgRLegKyuwXInj0e1PBkFVXJaP56IpxzQXSOYdLiMwjDe1S',
+  edad: '23',
+  cargo: 'Nepe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:22:29.155Z,
+  updatedAt: 2022-03-06T22:22:29.155Z,
+  __v: 0
+}
+[2022-03-08T02:42:53.996Z] info Escuchando en el puerto 3000
+[2022-03-08T02:42:54.019Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-08T02:43:50.830Z] info Empleados obtenidos {
+  _id: new ObjectId("6225342539f90768430e2bac"),
+  nombre: 'ElPepe',
+  email: 'test1@gmail.com',
+  contrasena: '$2a$10$HcIAWwJgRLegKyuwXInj0e1PBkFVXJaP56IpxzQXSOYdLiMwjDe1S',
+  edad: '23',
+  cargo: 'Nepe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:22:29.155Z,
+  updatedAt: 2022-03-06T22:22:29.155Z,
+  __v: 0
+}
+[2022-03-08T02:44:53.904Z] info Empleados obtenidos {
+  _id: new ObjectId("6225342539f90768430e2bac"),
+  nombre: 'ElPepe',
+  email: 'test1@gmail.com',
+  contrasena: '$2a$10$HcIAWwJgRLegKyuwXInj0e1PBkFVXJaP56IpxzQXSOYdLiMwjDe1S',
+  edad: '23',
+  cargo: 'Nepe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:22:29.155Z,
+  updatedAt: 2022-03-06T22:22:29.155Z,
+  __v: 0
+}
+[2022-03-08T17:35:47.077Z] info Escuchando en el puerto 3000
+[2022-03-08T17:35:47.101Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-08T17:43:54.590Z] info Empleados obtenidos {
+  _id: new ObjectId("6225342539f90768430e2bac"),
+  nombre: 'ElPepe',
+  email: 'test1@gmail.com',
+  contrasena: '$2a$10$HcIAWwJgRLegKyuwXInj0e1PBkFVXJaP56IpxzQXSOYdLiMwjDe1S',
+  edad: '23',
+  cargo: 'Nepe',
+  tipoUsuario: 'Admin',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:22:29.155Z,
+  updatedAt: 2022-03-06T22:22:29.155Z,
+  __v: 0
+}
+[2022-03-08T17:44:21.689Z] info Empleados obtenidos {
+  _id: new ObjectId("6225342539f90768430e2bac"),
+  nombre: 'ElPepe',
+  email: 'test1@gmail.com',
+  contrasena: '$2a$10$HcIAWwJgRLegKyuwXInj0e1PBkFVXJaP56IpxzQXSOYdLiMwjDe1S',
+  edad: '23',
+  cargo: 'Nepe',
+  tipoUsuario: 'Admin',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:22:29.155Z,
+  updatedAt: 2022-03-06T22:22:29.155Z,
+  __v: 0
+}
+[2022-03-08T17:46:56.742Z] info Empleados obtenidos {
+  _id: new ObjectId("6225342539f90768430e2bac"),
+  nombre: 'ElPepe',
+  email: 'test1@gmail.com',
+  contrasena: '$2a$10$HcIAWwJgRLegKyuwXInj0e1PBkFVXJaP56IpxzQXSOYdLiMwjDe1S',
+  edad: '23',
+  cargo: 'Nepe',
+  tipoUsuario: 'Admin',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:22:29.155Z,
+  updatedAt: 2022-03-06T22:22:29.155Z,
+  __v: 0
+}
+[2022-03-08T17:47:56.909Z] info Empleados obtenidos {
+  _id: new ObjectId("622534a239f90768430e2bb3"),
+  nombre: 'ElPepe2',
+  email: 'test2@gmail.com',
+  contrasena: '$2a$10$PA.uyclmplAQRgRjVEiN2OEe19G3EMJpcbN9oiYgFq/0J.CInkRb2',
+  edad: '23',
+  cargo: 'sabe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:24:34.015Z,
+  updatedAt: 2022-03-06T22:24:34.015Z,
+  __v: 0
+}
+[2022-03-08T18:29:18.922Z] info Empleados obtenidos {
+  _id: new ObjectId("622534a239f90768430e2bb3"),
+  nombre: 'ElPepe2',
+  email: 'test2@gmail.com',
+  contrasena: '$2a$10$PA.uyclmplAQRgRjVEiN2OEe19G3EMJpcbN9oiYgFq/0J.CInkRb2',
+  edad: '23',
+  cargo: 'sabe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:24:34.015Z,
+  updatedAt: 2022-03-06T22:24:34.015Z,
+  __v: 0
+}
+[2022-03-08T18:29:28.348Z] info Empleados obtenidos {
+  _id: new ObjectId("622534a239f90768430e2bb3"),
+  nombre: 'ElPepe2',
+  email: 'test2@gmail.com',
+  contrasena: '$2a$10$PA.uyclmplAQRgRjVEiN2OEe19G3EMJpcbN9oiYgFq/0J.CInkRb2',
+  edad: '23',
+  cargo: 'sabe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:24:34.015Z,
+  updatedAt: 2022-03-06T22:24:34.015Z,
+  __v: 0
+}
+[2022-03-08T18:50:49.474Z] info Empleados obtenidos {
+  _id: new ObjectId("622534a239f90768430e2bb3"),
+  nombre: 'ElPepe2',
+  email: 'test2@gmail.com',
+  contrasena: '$2a$10$PA.uyclmplAQRgRjVEiN2OEe19G3EMJpcbN9oiYgFq/0J.CInkRb2',
+  edad: '23',
+  cargo: 'sabe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:24:34.015Z,
+  updatedAt: 2022-03-06T22:24:34.015Z,
+  __v: 0
+}
+[2022-03-08T19:35:57.760Z] info Empleados obtenidos {
+  _id: new ObjectId("622534a239f90768430e2bb3"),
+  nombre: 'ElPepe2',
+  email: 'test2@gmail.com',
+  contrasena: '$2a$10$PA.uyclmplAQRgRjVEiN2OEe19G3EMJpcbN9oiYgFq/0J.CInkRb2',
+  edad: '23',
+  cargo: 'sabe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:24:34.015Z,
+  updatedAt: 2022-03-06T22:24:34.015Z,
+  __v: 0
+}
+[2022-03-08T21:34:12.390Z] info Escuchando en el puerto 3000
+[2022-03-08T21:34:12.433Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-08T21:37:29.943Z] info Empleados obtenidos {
+  _id: new ObjectId("622534a239f90768430e2bb3"),
+  nombre: 'ElPepe2',
+  email: 'test2@gmail.com',
+  contrasena: '$2a$10$PA.uyclmplAQRgRjVEiN2OEe19G3EMJpcbN9oiYgFq/0J.CInkRb2',
+  edad: '23',
+  cargo: 'sabe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:24:34.015Z,
+  updatedAt: 2022-03-06T22:24:34.015Z,
+  __v: 0
+}
+[2022-03-08T21:41:14.440Z] info Escuchando en el puerto 3000
+[2022-03-08T21:41:14.463Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-08T21:42:36.150Z] info Empleados obtenidos {
+  _id: new ObjectId("6225342539f90768430e2bac"),
+  nombre: 'ElPepe',
+  email: 'test1@gmail.com',
+  contrasena: '$2a$10$HcIAWwJgRLegKyuwXInj0e1PBkFVXJaP56IpxzQXSOYdLiMwjDe1S',
+  edad: '23',
+  cargo: 'Nepe',
+  tipoUsuario: 'Admin',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:22:29.155Z,
+  updatedAt: 2022-03-06T22:22:29.155Z,
+  __v: 0
+}
+[2022-03-08T21:42:52.891Z] info Empleados obtenidos {
+  _id: new ObjectId("622534a239f90768430e2bb3"),
+  nombre: 'ElPepe2',
+  email: 'test2@gmail.com',
+  contrasena: '$2a$10$PA.uyclmplAQRgRjVEiN2OEe19G3EMJpcbN9oiYgFq/0J.CInkRb2',
+  edad: '23',
+  cargo: 'sabe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:24:34.015Z,
+  updatedAt: 2022-03-06T22:24:34.015Z,
+  __v: 0
+}
+[2022-03-08T21:54:12.336Z] info Escuchando en el puerto 3000
+[2022-03-08T21:54:12.364Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-08T21:56:44.300Z] info Escuchando en el puerto 3000
+[2022-03-08T21:56:44.329Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-08T22:01:43.803Z] info Escuchando en el puerto 3000
+[2022-03-08T22:01:43.827Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-08T22:08:59.570Z] info Escuchando en el puerto 3000
+[2022-03-08T22:08:59.588Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-08T22:09:21.744Z] info Escuchando en el puerto 3000
+[2022-03-08T22:09:21.770Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-08T22:13:00.562Z] info Escuchando en el puerto 3000
+[2022-03-08T22:13:00.580Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-08T22:13:12.249Z] info Escuchando en el puerto 3000
+[2022-03-08T22:13:12.273Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-08T22:13:44.497Z] info Escuchando en el puerto 3000
+[2022-03-08T22:13:44.521Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T02:38:05.983Z] info Escuchando en el puerto 3000
+[2022-03-09T02:38:06.006Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T02:39:06.411Z] info Empleados obtenidos {
+  _id: new ObjectId("6225342539f90768430e2bac"),
+  nombre: 'ElPepe',
+  email: 'test1@gmail.com',
+  contrasena: '$2a$10$HcIAWwJgRLegKyuwXInj0e1PBkFVXJaP56IpxzQXSOYdLiMwjDe1S',
+  edad: '23',
+  cargo: 'Nepe',
+  tipoUsuario: 'Admin',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:22:29.155Z,
+  updatedAt: 2022-03-06T22:22:29.155Z,
+  __v: 0
+}
+[2022-03-09T02:39:16.480Z] info Empleados obtenidos {
+  _id: new ObjectId("622534a239f90768430e2bb3"),
+  nombre: 'ElPepe2',
+  email: 'test2@gmail.com',
+  contrasena: '$2a$10$PA.uyclmplAQRgRjVEiN2OEe19G3EMJpcbN9oiYgFq/0J.CInkRb2',
+  edad: '23',
+  cargo: 'sabe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:24:34.015Z,
+  updatedAt: 2022-03-06T22:24:34.015Z,
+  __v: 0
+}
+[2022-03-09T02:46:32.722Z] info Empleados obtenidos {
+  _id: new ObjectId("622534a239f90768430e2bb3"),
+  nombre: 'ElPepe2',
+  email: 'test2@gmail.com',
+  contrasena: '$2a$10$PA.uyclmplAQRgRjVEiN2OEe19G3EMJpcbN9oiYgFq/0J.CInkRb2',
+  edad: '23',
+  cargo: 'sabe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:24:34.015Z,
+  updatedAt: 2022-03-06T22:24:34.015Z,
+  __v: 0
+}
+[2022-03-09T02:47:33.167Z] info Empleados obtenidos {
+  _id: new ObjectId("622534a239f90768430e2bb3"),
+  nombre: 'ElPepe2',
+  email: 'test2@gmail.com',
+  contrasena: '$2a$10$PA.uyclmplAQRgRjVEiN2OEe19G3EMJpcbN9oiYgFq/0J.CInkRb2',
+  edad: '23',
+  cargo: 'sabe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:24:34.015Z,
+  updatedAt: 2022-03-06T22:24:34.015Z,
+  __v: 0
+}
+[2022-03-09T02:47:48.749Z] info Empleados obtenidos {
+  _id: new ObjectId("622534a239f90768430e2bb3"),
+  nombre: 'ElPepe2',
+  email: 'test2@gmail.com',
+  contrasena: '$2a$10$PA.uyclmplAQRgRjVEiN2OEe19G3EMJpcbN9oiYgFq/0J.CInkRb2',
+  edad: '23',
+  cargo: 'sabe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:24:34.015Z,
+  updatedAt: 2022-03-06T22:24:34.015Z,
+  __v: 0
+}
+[2022-03-09T02:56:48.929Z] info Escuchando en el puerto 3000
+[2022-03-09T02:56:48.954Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T03:01:09.001Z] info Escuchando en el puerto 3000
+[2022-03-09T03:01:09.023Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T03:02:40.151Z] info Escuchando en el puerto 3000
+[2022-03-09T03:02:40.169Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T03:03:10.397Z] info Escuchando en el puerto 3000
+[2022-03-09T03:03:10.419Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T03:06:37.648Z] info Escuchando en el puerto 3000
+[2022-03-09T03:06:37.666Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T03:07:18.916Z] info Escuchando en el puerto 3000
+[2022-03-09T03:07:18.939Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T03:07:38.479Z] info Escuchando en el puerto 3000
+[2022-03-09T03:07:38.498Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T03:09:38.436Z] info Escuchando en el puerto 3000
+[2022-03-09T03:09:38.459Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T03:21:23.772Z] info Escuchando en el puerto 3000
+[2022-03-09T03:21:23.797Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T03:24:26.713Z] info Escuchando en el puerto 3000
+[2022-03-09T03:24:26.733Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T18:40:39.738Z] info Escuchando en el puerto 3000
+[2022-03-09T18:40:39.783Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T18:44:03.147Z] info Empleados obtenidos {
+  _id: new ObjectId("622534a239f90768430e2bb3"),
+  nombre: 'ElPepe2',
+  email: 'test2@gmail.com',
+  contrasena: '$2a$10$PA.uyclmplAQRgRjVEiN2OEe19G3EMJpcbN9oiYgFq/0J.CInkRb2',
+  edad: '23',
+  cargo: 'sabe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:24:34.015Z,
+  updatedAt: 2022-03-06T22:24:34.015Z,
+  __v: 0
+}
+[2022-03-09T20:42:15.828Z] info Empleados obtenidos {
+  _id: new ObjectId("622534a239f90768430e2bb3"),
+  nombre: 'ElPepe2',
+  email: 'test2@gmail.com',
+  contrasena: '$2a$10$PA.uyclmplAQRgRjVEiN2OEe19G3EMJpcbN9oiYgFq/0J.CInkRb2',
+  edad: '23',
+  cargo: 'sabe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:24:34.015Z,
+  updatedAt: 2022-03-06T22:24:34.015Z,
+  __v: 0
+}
+[2022-03-09T20:47:13.689Z] info Escuchando en el puerto 3000
+[2022-03-09T20:47:13.711Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T20:47:51.237Z] info Escuchando en el puerto 3000
+[2022-03-09T20:47:51.260Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T20:49:19.944Z] info Escuchando en el puerto 3000
+[2022-03-09T20:49:19.967Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T20:49:40.858Z] info Escuchando en el puerto 3000
+[2022-03-09T20:49:40.882Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T20:50:44.746Z] info Escuchando en el puerto 3000
+[2022-03-09T20:50:44.769Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T20:52:55.141Z] info Escuchando en el puerto 3000
+[2022-03-09T20:52:55.159Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T20:55:45.845Z] info Escuchando en el puerto 3000
+[2022-03-09T20:55:45.867Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T20:56:57.843Z] info Escuchando en el puerto 3000
+[2022-03-09T20:56:57.861Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T21:01:34.801Z] info Escuchando en el puerto 3000
+[2022-03-09T21:01:34.823Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T21:02:58.498Z] info Escuchando en el puerto 3000
+[2022-03-09T21:02:58.521Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T21:04:57.213Z] info Escuchando en el puerto 3000
+[2022-03-09T21:04:57.235Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T21:05:18.304Z] info Escuchando en el puerto 3000
+[2022-03-09T21:05:18.323Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T21:05:57.241Z] info Escuchando en el puerto 3000
+[2022-03-09T21:05:57.261Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T21:26:03.664Z] info Empleados obtenidos {
+  _id: new ObjectId("6225342539f90768430e2bac"),
+  nombre: 'ElPepe',
+  email: 'test1@gmail.com',
+  contrasena: '$2a$10$HcIAWwJgRLegKyuwXInj0e1PBkFVXJaP56IpxzQXSOYdLiMwjDe1S',
+  edad: '23',
+  cargo: 'Nepe',
+  tipoUsuario: 'Admin',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:22:29.155Z,
+  updatedAt: 2022-03-06T22:22:29.155Z,
+  __v: 0
+}
+[2022-03-09T21:26:57.750Z] info Empleados obtenidos {
+  _id: new ObjectId("622534a839f90768430e2bb6"),
+  nombre: 'ElPepe3',
+  email: 'test3@gmail.com',
+  contrasena: '$2a$10$xybiB/IjR6dky3A0ey1GZeSKXwBwXZuEdK4IQvRfkgkd7IGdGxZ22',
+  edad: '23',
+  cargo: 'sabe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:24:40.730Z,
+  updatedAt: 2022-03-06T22:24:40.730Z,
+  __v: 0
+}
+[2022-03-09T21:30:55.627Z] info Empleados obtenidos {
+  _id: new ObjectId("622534a239f90768430e2bb3"),
+  nombre: 'ElPepe2',
+  email: 'test2@gmail.com',
+  contrasena: '$2a$10$PA.uyclmplAQRgRjVEiN2OEe19G3EMJpcbN9oiYgFq/0J.CInkRb2',
+  edad: '23',
+  cargo: 'sabe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:24:34.015Z,
+  updatedAt: 2022-03-06T22:24:34.015Z,
+  __v: 0
+}
+[2022-03-09T21:36:40.033Z] info Escuchando en el puerto 3000
+[2022-03-09T21:36:40.054Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-09T21:36:54.989Z] info Escuchando en el puerto 3000
+[2022-03-09T21:36:55.008Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-10T00:47:29.409Z] info Escuchando en el puerto 3000
+[2022-03-10T00:47:29.432Z] info Base de datos online en: mongodb://localhost:27017/Seeda
+[2022-03-10T00:59:28.760Z] info Empleados obtenidos {
+  _id: new ObjectId("6225342539f90768430e2bac"),
+  nombre: 'ElPepe',
+  email: 'test1@gmail.com',
+  contrasena: '$2a$10$HcIAWwJgRLegKyuwXInj0e1PBkFVXJaP56IpxzQXSOYdLiMwjDe1S',
+  edad: '23',
+  cargo: 'Nepe',
+  tipoUsuario: 'Admin',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:22:29.155Z,
+  updatedAt: 2022-03-06T22:22:29.155Z,
+  __v: 0
+}
+[2022-03-10T00:59:38.876Z] info Empleados obtenidos {
+  _id: new ObjectId("622534a239f90768430e2bb3"),
+  nombre: 'ElPepe2',
+  email: 'test2@gmail.com',
+  contrasena: '$2a$10$PA.uyclmplAQRgRjVEiN2OEe19G3EMJpcbN9oiYgFq/0J.CInkRb2',
+  edad: '23',
+  cargo: 'sabe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:24:34.015Z,
+  updatedAt: 2022-03-06T22:24:34.015Z,
+  __v: 0
+}
+[2022-03-10T01:08:30.979Z] info Empleados obtenidos {
+  _id: new ObjectId("622534a239f90768430e2bb3"),
+  nombre: 'ElPepe2',
+  email: 'test2@gmail.com',
+  contrasena: '$2a$10$PA.uyclmplAQRgRjVEiN2OEe19G3EMJpcbN9oiYgFq/0J.CInkRb2',
+  edad: '23',
+  cargo: 'sabe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:24:34.015Z,
+  updatedAt: 2022-03-06T22:24:34.015Z,
+  __v: 0
+}
+[2022-03-10T01:12:17.135Z] info Empleados obtenidos {
+  _id: new ObjectId("622534a239f90768430e2bb3"),
+  nombre: 'ElPepe2',
+  email: 'test2@gmail.com',
+  contrasena: '$2a$10$PA.uyclmplAQRgRjVEiN2OEe19G3EMJpcbN9oiYgFq/0J.CInkRb2',
+  edad: '23',
+  cargo: 'sabe',
+  tipoUsuario: 'Trabajador',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:24:34.015Z,
+  updatedAt: 2022-03-06T22:24:34.015Z,
+  __v: 0
+}
+[2022-03-10T01:12:23.844Z] info Empleados obtenidos {
+  _id: new ObjectId("6225342539f90768430e2bac"),
+  nombre: 'ElPepe',
+  email: 'test1@gmail.com',
+  contrasena: '$2a$10$HcIAWwJgRLegKyuwXInj0e1PBkFVXJaP56IpxzQXSOYdLiMwjDe1S',
+  edad: '23',
+  cargo: 'Nepe',
+  tipoUsuario: 'Admin',
+  blnActivo: true,
+  'createdAt:': 2022-03-06T22:22:29.155Z,
+  updatedAt: 2022-03-06T22:22:29.155Z,
+  __v: 0
+}

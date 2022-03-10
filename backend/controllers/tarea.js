@@ -26,7 +26,7 @@ const tareasPorUsuario = async (req,res) => {
 
     try {
         let { id } = req.params
-        const tareasObtenidas = await Tarea.find({ asignacion: id }).populate('asignacion')
+        const tareasObtenidas = await Tarea.find({ asignacion: id, completado:false })
         if (tareasObtenidas.length === 0) {
             res.status(404).send({
                 msg: 'No hay tareas pendientes para este empleado'
@@ -78,8 +78,6 @@ const agregarTareas = async (req,res)=>{
 const completarTarea = async (req,res)=>{
 
     try {
-        
-    } catch (error) {
         let {id} = req.params
         if(!id){
             res.status(400).send({
@@ -106,6 +104,8 @@ const completarTarea = async (req,res)=>{
                 })
             }
         }
+        
+    } catch (error) {
         res.status(500).send({
             msg: 'Ocurrio un error de nuestra parte, intente de nuevo'
         })
@@ -175,6 +175,7 @@ const eliminarTarea = async (req,res)=>{
                     msg: 'No se pudo eliminar la tarea intente de nuevo'
                 })
             }else{
+                logger.info(`Empleados obtenidos ${tareaTerminada}`)
                 res.status(200).send({
                     msg: 'Exito al eliminar',
                     cont: tareaTerminada

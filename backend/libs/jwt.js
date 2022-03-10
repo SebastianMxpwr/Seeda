@@ -6,7 +6,7 @@ exports.creaToken = (empleado) =>{
 
     const payload = {
         sub: empleado._id,
-        nombres: empleado.nombreEmpleado,
+        nombres: empleado.nombre,
         email: empleado.email,
         tipoUsuario: empleado.tipoUsuario,
         iat: moment().unix(),
