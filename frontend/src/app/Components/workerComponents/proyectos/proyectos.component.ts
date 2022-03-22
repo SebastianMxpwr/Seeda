@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
-import { ProjectService } from "../../Services/project.service";
+import { ProjectService } from "../../../Services/project.service";
 
 
 @Component({
@@ -17,6 +17,7 @@ export class ProyectosComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProjectWorkerC()
+    
   }
 
   logout(){

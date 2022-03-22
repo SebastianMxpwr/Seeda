@@ -1,97 +1,103 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;1,300&display=swap");
 
-
-
-#caca {
-  width: 98vw;
-  height: 98vh;
-  background: url("https://digital-interactiva.com/pluginfile.php/27/block_mb2slider/content/avel-chuklanov-DUmFLtMeAbQ-unsplash.jpg")
-    no-repeat center center fixed;
-  background-size: cover;
-  overflow: hidden;
-  font-family: "Source Sans Pro", sans-serif;
-  color: white;
-  font-weight: 300;
-}
-
-.glass{
-    position: relative;
-    top: 10%;
-    border-radius:25px;
-    width: 75%;
-    height: 80%;
-    margin: 0 auto;
-    background-color: #ffffff10;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px); ;
-}
 
 .container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 120px 0;
-  height: 400px;
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color:#30475E;
+  font-family: "Work Sans", sans-serif;
 }
 
-.container h1 {
-  font-size: 40px;
-  font-weight: 800;
+form{
+  width: 400px;
+  height: 500px;
+  background:#DDDDDD;
+  margin: 10% ;
+  padding:10px;
+  border-radius: 15px 0px 0px 15px;
+  margin: 0px 0px 0px 15%;
 }
 
-form {
-  padding: 20px 0;
-  position: relative;
-  z-index: 2;
+form .form-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20% 5% 40% 5%;
 }
 
-button {
-  appearance: none;
+form .form-container h1{
+  text-align: start;
+  font-size: 45px;
+}
+
+form .form-container input{
+  width: 320px;
+  height: 20px;
+  margin: 16px;
   outline: 0;
-  background-color: white;
   border: 0;
-  padding: 10px 15px;
-  color: #53e3a6;
-  border-radius: 3px;
-  width: 250px;
+  border-bottom: 4px solid #afafaf;
+  font-size: 18px;
+  background-color: #DDDDDD;
+  transition-duration: .2s
+}
+
+form .form-container input:hover{
+  height: 30px;
+  border-bottom: 4px solid #afafaf;
+}
+
+form .form-container input:focus{
+  height: 30px;
+  border-bottom: 4px solid #afafaf;
+}
+
+form .form-container label{
+  align-self:flex-start;
+  margin: 1px 1px 1px 16px;
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+form .form-container button{
+  width: 90%;
+  height: 50px;
+  border: 0;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 18px;
-  transition-duration: 0.25s;
+  font-size: 20px;
+  background: #222831;
+  color: #afafaf;
+  transition: .2s all;
 }
 
-button:hover {
-  background-color: rgb(245, 247, 249);
+form .form-container button:hover{
+  transform: scale(1.05);
+}
+form .form-container button:active{
+  transform: scale(.98);
+  background: #323a47
 }
 
-input {
-  display: block;
-  appearance: none;
-  outline: 0;
-  border: 1px solid rgba(245, 247, 249, 0.603);
-  background-color: rgba(245, 247, 249, 0.801);
-  width: 250px;
 
-  border-radius: 3px;
-  padding: 10px 15px;
-  margin: 0 auto 10px auto;
-  display: block;
-  text-align: center;
-  font-size: 18px;
-
-  color: rgb(3, 3, 3);
-
-  transition-duration: 0.25s;
-  font-weight: 300;
+.container .ilustration{
+  width: 600px;
+  height: 520px;
+  background:#222831;
+  border-radius: 0px 15px 15px 0px;
 }
 
-input:focus {
-  background-color: rgba(245, 247, 249, 0.603);
-  width: 300px;
+.container .ilustration img{
+  height: 400px;
+  width: 500px;
+  margin: 10%;
+  float:right;
 }
 
-input:hover {
-  background-color: white;
-  
 
-  color: #53e3a6;
-}
+
+

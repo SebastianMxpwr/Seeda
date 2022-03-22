@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TaskService } from "../../Services/task.service";
+import { TaskService } from "../../../Services/task.service";
 import { Router } from "@angular/router";
 
 
@@ -16,6 +16,9 @@ export class WorkerComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllTaskC()
+    if(!localStorage.getItem('_id') && !localStorage.getItem('jwt')){
+      this.router.navigate(['/'])
+    }
   }
 
   logout(){
@@ -39,7 +42,7 @@ export class WorkerComponent implements OnInit {
 
   completeTaskC(id: string){
     const body = {}
-    this.taskService.completeTaskC(id, body).subscribe((res)=>{
+    this.taskService.completeTask(id, body).subscribe((res)=>{
       console.log(res);
       this.tasks.pop()
       

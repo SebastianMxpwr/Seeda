@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;1,300&display=swap");
+
+
+
+.navegacion{
+  width: 100%;
+  height: 80px;
+  background: #222831;
+}
+
+.navegacion ul{
+  list-style: none;
+  
+}
+
+.navegacion > ul{
+  float: right;
+}
+
+.menu > li{
+  position: relative;
+  display: inline-block;
+  
+}
+.menu > li > a{
+  display: block;
+  padding: 15px 20px;
+  color: #f2f2f2;
+  font-family:Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+.menu > li > a:hover{
+  background-color: #CE7D35;
+  transition: all .3s;
+}
+
+.navegacion ul button{
+  float: right;
+background-color: rgb(204, 13, 118);
+color: #f2f2f2;
+margin: 7px 8px;
+border: 0;
+padding: 10px;
+border-radius: 5px;
+cursor: pointer;
+width: 100px;
+font-size: 14px;
+font-weight: 600;
+transition: 0.5s all;
+}
+
+.submenu{
+  position:absolute;
+  background: #333333;
+  width: 100px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.submenu li a{
+  display: block;
+  padding: 10px;
+  color: #fff;
+  font-size: 12px;
+  font-family:Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+
+.menu li:hover .submenu{
+  visibility: visible;
+  opacity: 1;
+}
+
+.submenu li a:hover{
+  color: #CE7D35;
+  transition: all .3s;
+}
+
+.navegacion ul button:hover{
+  background-color: rgb(230, 23, 23);
+ 
+}
+
+.graphs{
+    width: 75%;
+}
+
+.container {
+    height: 100%;
+    width: 30%;
+    margin-left: 50%;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Work Sans", sans-serif;
+}
+
+.card{
+    width: 100%;
+    height: 20%;
+    float: right;
+    border-bottom: 1px solid rgb(134, 134, 134);
+    background: #fff;
+   
+}
+
+.card .card-container .info-name{
+    float: right;
+}
+.card .card-container .photo{
+
+}
+.card .card-container .photo img{
+    float: left;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.card .card-container .info-name .card-name{
+   font-size: 16px;
+   text-align: left;
+   padding-right: 10px;
+}
+.card .card-container .info-name .card-email{
+    font-size: 10px;
+    text-align: left;
+    padding-right: 10px;
+ }
+.card .card-container .data-info{
+    float:left;
+    padding-left: 10px;
+
+}
+.card .card-container .data-info .data{
+    font-size: 10px;
+    padding-left: 5px;
+}

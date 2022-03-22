@@ -14,7 +14,11 @@ export class TaskService {
     return this.http.get(`${this.url}/obter_tarea_usuario/${localStorage.getItem('_id')}`)
   }
 
-  completeTaskC(id, body){
+  completeTask(id, body){
     return this.http.put(`${this.url}/completar_tarea/${id}`, body)
+  }
+
+  addTask(body){
+    return this.http.post(`${this.url}/registrar_tarea`, body)
   }
 }
