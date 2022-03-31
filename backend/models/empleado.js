@@ -21,6 +21,10 @@ const empleadoSchema = new Schema({
         type: String,
         required: true,
     },
+    sueldo:{
+        type: Number,
+        required: true,
+    },
     tipoUsuario:{
         type: String,
         default: 'Trabajador'

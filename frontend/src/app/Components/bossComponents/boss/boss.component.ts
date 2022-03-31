@@ -15,7 +15,6 @@ export class BossComponent implements OnInit {
   constructor(public router: Router, public workerS: WorkerService) { }
 
   ngOnInit(): void {
-    this.getAllWorkersC()
   }
 
   logout(){
@@ -23,17 +22,6 @@ export class BossComponent implements OnInit {
     localStorage.removeItem('email')
     localStorage.removeItem('jwt')
     this.router.navigate(['/'])
-  }
-
-  getAllWorkersC(){
-    this.workerS.getAllWorkers().subscribe((res: any) => {
-      this.workers = res.cont
-      console.log(this.workers);
-      
-    },error => {
-      console.log(error);
-      
-    })
   }
 
 }

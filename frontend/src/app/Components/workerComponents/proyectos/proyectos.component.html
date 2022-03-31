@@ -1,9 +1,4 @@
-<nav id="top-nav">
-    <img id="img-empresa">
-    <a href="/worker">Tareas</a>
-    <a href="/projects">Proyectos</a>
-    <button (click)="logout()">Logout</button>
-</nav>
+<app-navbar-worker></app-navbar-worker>
 
 
 <div class="vacio" *ngIf="projects.length == 0; else main_content">
@@ -14,21 +9,25 @@
     <div class="cantainer">
         <div class="card" *ngFor="let project of projects">
             <div class="card-title">
-                <h2>{{project.nombre}}</h2>
+                <h2>Nombre del Proyecto:</h2>
+                <p>{{project.nombre}}</p>
             </div>
             <div class="card-description">
+                <label><strong>Descripcion del proyecto:</strong></label>
                 <p>{{project.descripcion}}</p>
             </div>
+            <h3>Tareas asignadas al proyecto</h3>
             <div class="card-container">
-                <div class="tasks"*ngFor="let task of tareasAsginadas">
-                    <div class="title" [ngStyle]="{'color': task.completado ? '#F00' : '#FFF' }">
-                        <h4>{{task.nombreTarea}}</h4>
+                <div class="tasks"*ngFor="let task of tareasAsginadas" [ngStyle]="{'background': task.completado ? '#F05454' : '#222831' }">
+                    <div class="title" [ngStyle]="{'color': task.completado ? '#222831' : '#DDDDDD' }">
+                        <h3>{{task.nombreTarea}}</h3>
                     </div>
-                    <div class="description" [ngStyle]="{'color': task.completado ? '#F00' : '#FFF' }">
+                    <div class="description" [ngStyle]="{'color': task.completado ? '#222831' : '#DDDDDD' }">
                         <p>{{task.descripcion}}</p>
                     </div>                   
                 </div>
             </div>
+            <h3>Empleados asignados al proyecto</h3>
             <div class="card-container">
                 <div class="users" *ngFor="let worker of empleadosAsginados">
                     <div class="info">

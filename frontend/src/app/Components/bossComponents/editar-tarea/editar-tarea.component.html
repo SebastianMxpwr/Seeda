@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+
+
+<div class="container">
+    <form #loginform="ngForm" (ngSubmit)="actualizarTarea(loginform)" class="form">
+        <div class="form-container">
+            <h1>Bienvenido</h1> 
+            <div class="input-data">
+                <label>Nombre</label>
+                <input type="text" name="nombre"  [(ngModel)]="tarea.nombreTarea">
+            </div>
+            <div class="input-data">
+                <label>Descripcion</label>
+                <input type="text" name="email"  [(ngModel)]="tarea.descripcion">
+            </div>
+            <div class="input-data">
+                <label>Asignacion</label>
+                <input type="text" name="edad" [(ngModel)]="tarea.asignacion" disabled>
+            </div>
+            <button type="submit" id="login-button">Rditar</button>
+        </div>
+        
+       
+    </form>
+</div>
+

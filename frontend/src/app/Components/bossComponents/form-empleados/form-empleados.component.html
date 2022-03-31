@@ -1,36 +1,10 @@
-<nav class="navegacion">
-    <ul class="menu">
-        <li><a href="/boss">Inicio</a></li>
-        <li><a href="/boss/formt">Tareas</a>
-            <ul class="submenu">
-                <li><a href="#">Editar</a></li>
-                <li><a href="#">Eliminar</a></li>
-                <li><a href="#">Agregar Emp.</a></li>
-            </ul></li>
-        <li><a href="/boss/formp">Proyectos</a>
-            <ul class="submenu">
-                <li><a href="#">Editar</a></li>
-                <li><a href="#">Eliminar</a></li>
-                <li><a href="#">Agregar Emp.</a></li>
-                <li><a href="#">Agregar Tareas</a></li>
-            </ul>
-        </li>
-        <li><a href="/boss/forme">Trabajadores</a>
-            <ul class="submenu">
-                <li><a href="#">Editar</a></li>
-                <li><a href="#">Eliminar</a></li>
-            </ul>
-        </li>
-        <button (click)="logout()">Logout</button>
-    </ul>
-    
-</nav>
+<app-navbar></app-navbar>
 
 
 <div class="container">
     <form #loginform="ngForm" (ngSubmit)="login_Component(loginform)" class="form">
         <div class="form-container">
-            <h1>Bienvenido</h1> 
+            <h1>Agregar Usuario</h1> 
             <div class="input-data">
                 <label>Nombre</label>
                 <input type="text" name="nombre" [(ngModel)]="empleado.nombre">
@@ -52,8 +26,15 @@
                 <input type="text" name="cargo" [(ngModel)]="empleado.cargo">
             </div>
             <div class="input-data">
+                <label>sueldo</label>
+                <input type="number" name="sueldo" [(ngModel)]="empleado.sueldo">
+            </div>
+            <div class="input-data">
                 <label>Tipo de Usuario</label>
-                <input type="text" name="tipoUsuario" [(ngModel)]="empleado.tipoUsuario">
+                <select name="tipoUsuario" id="selectType"  [(ngModel)]="empleado.tipoUsuario">
+                    <option selected>Trabajador</option>
+                    <option>Admin</option>
+                </select>
             </div>
             <button type="submit" id="login-button">Crear</button>
         </div>

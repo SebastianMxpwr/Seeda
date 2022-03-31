@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;1,300&display=swap");
+
+
+.cantainer{
+  display: flex;
+  flex-direction: column;
+  grid-gap:10px 20px;
+  margin: 10px 40px 10px 40px;
+  font-family: "Work Sans", sans-serif;
+}
+
+.cantainer .card{
+  width: 100%;
+  padding: 0px 0px 20px 0px;
+  background: #DDDDDD;
+  border-radius: 15px;
+}
+
+.cantainer .card > h3{
+  padding: 0px 0px 0px 20px
+}
+
+/* .cantainer p{
+} */
+
+.cantainer .card .card-title{
+  padding: 20px 20px 0px 20px;
+  font-size: 16px;
+  margin: 1% 5px 0px 5px;
+}
+
+.cantainer .card .card-title p{
+  background: #b9b9b9;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.cantainer .card .card-description{
+  padding: 20px;
+  font-size: 12px;  
+  margin: 1% 5px 0px 5px;
+}
+
+.cantainer .card .card-description p{
+  background: #b9b9b9;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.cantainer .card .card-container{
+  display: flex;
+  flex-direction: row;
+  grid-gap:10px 20px;
+  margin: 1% 30px 0px 30px;
+  background: #b9b9b9;
+  padding: 20px;
+  border-radius: 10px;
+
+}
+.cantainer .card .card-container-buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-gap:10px 20px;
+    margin: 1% 30px 0px 30px;
+    background: #b9b9b9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cantainer .card .card-container-buttons button{
+    background-color: #F05454;
+    color: #682626;
+    font-size: 14px;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 4px;
+    cursor: pointer;
+    transition: .2s all;
+    margin-right: 20px;
+}
+
+.cantainer .card .card-container .tasks{
+  border-radius: 10px;
+  width: 12%;
+  font-size: 12px;
+  background: #222831;
+  color:#DDDDDD;
+  transition:.3s all; 
+}
+
+.cantainer .card .card-container .tasks .title h3{
+  padding: 0px 0px 0px 10px;
+}
+
+.cantainer .card .card-container .tasks .description p{
+  padding: 0px 0px 0px 10px;
+}
+
+
+.cantainer .card .card-container .users{
+  border-radius: 5px;
+  width: 12%;
+  font-size: 12px;
+  font-weight: bold;
+  background: #222831;
+  color: #DDDDDD;
+  transition:.3s all; 
+}
+
+.cantainer .card .card-container .users .info{
+  padding: 0px 0px 0px 10px;
+}
+
+.cantainer .card .card-container-buttons button:hover{
+    transform: scale(1.05);
+}
+
+.cantainer .card .card-container-buttons button:active{
+    transform: scale(.98);
+    background: #c74646
+}
+
+.cantainer .card .card-container .tasks:hover{
+  box-shadow: 5px 5px 6px 0px rgba(33,39,48,0.75);
+  transform:translateY(-5px);
+}
+
+.cantainer .card .card-container .users:hover{
+  box-shadow: 5px 5px 6px 0px rgba(33,39,48,0.75);
+  transform:translateY(-5px);
+}
+

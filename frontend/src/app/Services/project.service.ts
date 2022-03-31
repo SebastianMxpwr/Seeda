@@ -14,4 +14,12 @@ export class ProjectService {
   getProjectWorker(id){
     return this.http.get(`${this.url}/obtener_proyectos_usuario/${id}`)
   }
+
+  getAllProjects(){
+    return this.http.get(`${this.url}/obtener_proyectos`)
+  }
+
+  postProject(body){
+    return this.http.post(`${this.url}/agregar_proyectos`, body)
+  }
 }

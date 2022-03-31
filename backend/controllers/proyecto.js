@@ -1,18 +1,19 @@
+'use strict'
+
 const Proyecto = require('../models/proyecto')
 const Tarea = require('../models/tarea')
 
 const obtenerProyectos = async (req, res) =>{
 
     const proyectosObtenidos = await Proyecto.find({
-      Editado: false,
+        blnActivo: false,
     }).populate([
       {
         path: 'empladosAsignados',
         match: { blnActivo: true },
       },
       {
-          path: 'tareasAsginadas',
-          match: {Editado: false}
+          path: 'tareasAsginadas'
       }
     ]);
     if(proyectosObtenidos.length == 0){
@@ -20,11 +21,77 @@ const obtenerProyectos = async (req, res) =>{
             msg: 'No hay proyectos activos'
         })
     }else{
+        const tasks = []
+        const employees = []
+        for (let i = 0; i < proyectosObtenidos.length; i++) {
+           for (let j = 0; j < proyectosObtenidos[i].tareasAsginadas.length; j++) {
+            tasks.push(proyectosObtenidos[i].tareasAsginadas[j]);
+               
+           }
+        }
+
+        for (let i = 0; i < proyectosObtenidos.length; i++) {
+           for (let j = 0; j < proyectosObtenidos[i].empladosAsignados.length; j++) {
+               employees.push(proyectosObtenidos[i].empladosAsignados[j])
+ 
+           }  
+        }
         res.status(200).send({
             msg: 'Proyectos obtenidos correctamente',
-            cont: proyectosObtenidos
+            cont1: proyectosObtenidos,
+            cont2: tasks,
+            cont3: employees,
         })
     }
+}
+
+const obtenerProyectoPorId = async (req, res)=>{
+    const { id } = req.params
+
+    if(!id){
+        res.status(400).send({
+            msg: 'no se recibio un id valido'
+        })
+    }
+
+    const proyectoEncontrado = await Proyecto.findById(id).populate([
+        {
+          path: 'empladosAsignados',
+          match: { blnActivo: true },
+        },
+        {
+            path: 'tareasAsginadas'
+        }
+      ]);
+    
+      if(!proyectoEncontrado){
+          res.status(404).send({
+              msg:'El proyecto no se encontro o no existe'
+          })
+      }else{
+        const tasks = []
+        const employees = []
+        for (let i = 0; i < proyectoEncontrado.length; i++) {
+           for (let j = 0; j < proyectoEncontrado[i].tareasAsginadas.length; j++) {
+            tasks.push(proyectoEncontrado[i].tareasAsginadas[j]);
+               
+           }
+        }
+
+        for (let i = 0; i < proyectoEncontrado.length; i++) {
+           for (let j = 0; j < proyectoEncontrado[i].empladosAsignados.length; j++) {
+               employees.push(proyectoEncontrado[i].empladosAsignados[j])
+ 
+           }  
+        }
+        res.status(200).send({
+            msg: 'Proyectos obtenidos correctamente',
+            cont1: proyectoEncontrado,
+            cont2: tasks,
+            cont3: employees,
+        })
+      }
+
 }
 
 const obtenerProyectosPorUsuario = async (req, res) =>{

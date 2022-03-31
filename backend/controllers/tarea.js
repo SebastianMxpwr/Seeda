@@ -1,4 +1,6 @@
 const Tarea = require('../models/tarea')
+const logger = require('../libs/logger')
+
 
 const obtenerTodasTareas = async (req,res) => {
 
@@ -21,6 +23,32 @@ const obtenerTodasTareas = async (req,res) => {
     }
 
 }
+
+const ObtenerTareaId = async (req, res) => {
+  try {
+    let {id} = req.params;
+    if(!id){
+        res.status(400).send({
+            msg: 'No se recivio un id correcto'
+        })
+    }
+    const tareaObtenida = await Tarea.findById(id);
+    if (!tareaObtenida) {
+      res.status(404).send({
+        msg: "La tarea no se obtuvo o no existe",
+      });
+    } else {
+      res.status(200).send({
+        msg: "Obtenida con exito",
+        cont: tareaObtenida,
+      });
+    }
+  } catch (error) {
+    res.status(500).send({
+        msg: "Ocurrio un error de sistema vueva a intentarlo",
+    });
+  }
+};
 
 const tareasPorUsuario = async (req,res) => {
 
@@ -187,6 +215,7 @@ const eliminarTarea = async (req,res)=>{
         res.status(500).send({
             msg: 'Ocurrio un error de nuestra parte, intente de nuevo'
         })
+        console.log(error);
     }
 }
 
@@ -194,6 +223,7 @@ const eliminarTarea = async (req,res)=>{
 module.exports = {
     obtenerTodasTareas,
     tareasPorUsuario,
+    ObtenerTareaId,
     agregarTareas,
     completarTarea,
     editarTarea,

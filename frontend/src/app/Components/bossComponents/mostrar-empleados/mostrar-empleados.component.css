@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;1,300&display=swap");
+
+ng-template{
+    margin-bottom: 30px;
+  }
+  
+  .container {
+    margin-top: 30px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 50px;
+    font-family: "Work Sans", sans-serif;
+    
+  }
+  
+  .card {
+    width: 300px;
+    height: 220px;
+    background-color: #DDDDDD;
+    border-radius: 10px;
+    margin: 0px 0px 0px 80px;
+    transition: .2s all;
+    animation-name: iniciardatos;
+    animation-duration: .4s;
+  }
+  
+  .container .card-title {
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0px 0px 0px 20px;
+  }
+  
+  
+  
+  .container .card-desription {
+    height: 50px;
+    font-size: 14px;
+    padding: 0px 0px 0px 20px;
+    font-weight: 500;
+  }
+  
+  .container .buttons {
+    height: 65px;
+    text-align: center;
+    padding: 10px 0px 0px 20px;
+    margin: 30px 0px 0px 0px ;
+  }
+  
+  .container .buttons button {
+    background-color: #F05454;
+    color: #973535;
+    font-size: 14px;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 4px;
+    cursor: pointer;
+    transition: .2s all;
+    margin-right: 20px;
+  }
+  
+  .container .buttons button i {
+    padding-left: 5px;
+  }
+  
+  .vacio{
+    font-family: "Work Sans", sans-serif;
+    text-align: center;
+  }
+  
+  .card:hover{
+    box-shadow: 10px 17px 6px 0px rgba(33,39,48,0.75);
+    transform:translateY(-10px);
+  
+  }
+
+  .container .buttons button:first-child{
+    background-color:#30475E;
+    color: #DDDDDD
+  }
+  .container .buttons button:first-child:active{
+    background-color:#47698b;
+  }
+  
+  .container .buttons button:hover{
+    transform: scale(1.05);
+  }
+  
+  .container .buttons button:active{
+    transform: scale(.98);
+    background: #c74646
+  }
+  
+  @keyframes iniciardatos{
+   0%{
+     opacity: 0;
+   }
+  
+   50%{
+      opacity: 0.75;
+      transform: scale(1.05);
+   }
+  
+   100%{
+     opacity: 1;
+     transform: scale(1);
+   }
+  }

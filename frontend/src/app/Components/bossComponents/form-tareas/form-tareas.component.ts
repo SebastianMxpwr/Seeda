@@ -4,6 +4,8 @@ import { WorkerService } from "../../../Services/worker.service";
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 import { TaskService } from 'src/app/Services/task.service';
 
+declare var iziToast: any
+
 
 @Component({
   selector: 'app-form-tareas',
@@ -47,7 +49,11 @@ export class FormTareasComponent implements OnInit {
   task_Component(form){
     if(form.valid){
       this.tareaS.addTask(this.tarea).subscribe((res: any)=>{
-        console.log(res);
+        iziToast.success({
+          title: 'Exito registrar',
+          message: `Se registro la tarea`,
+          position: 'bottomLeft'
+        });
         
       },error => {
         console.log(error);

@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { WorkerService } from "../../../Services/worker.service";
 
+declare var iziToast: any
+
+
 @Component({
   selector: 'app-form-empleados',
   templateUrl: './form-empleados.component.html',
@@ -15,6 +18,7 @@ export class FormEmpleadosComponent implements OnInit {
     contrasena: '',
     edad: '',
     cargo: '',
+    sueldo: 0,
     tipoUsuario: ''
   }
 
@@ -33,15 +37,27 @@ export class FormEmpleadosComponent implements OnInit {
   login_Component(data:any){
     if(data.valid){
       console.log(this.empleado);
-      this.workerS.postWorker(this.empleado).subscribe((res)=>{
-        console.log(res);
+      
+      this.workerS.postWorker(this.empleado).subscribe((res:any)=>{
+        console.log(res.res.nombre);
+        
+        iziToast.success({
+          title: 'Exito registrar',
+          message: `Se registro correctamente`,
+          position: 'bottomLeft'
+        });
         
       }, err=>{
-        console.log(err);
-        
+        iziToast.error({
+          title: 'Error',
+          message: err.error.msg,
+        });
       })      
     }else{
-      console.log('Ta mal');
+      iziToast.error({
+        title: 'Error',
+        message: 'Datos no validos',
+      });;
       
     }
     

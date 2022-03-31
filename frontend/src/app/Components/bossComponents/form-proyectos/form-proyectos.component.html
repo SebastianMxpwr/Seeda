@@ -1,27 +1,48 @@
-<nav class="navegacion">
-    <ul class="menu">
-        <li><a href="/boss">Inicio</a></li>
-        <li><a href="/boss/formt">Tareas</a>
-            <ul class="submenu">
-                <li><a href="#">Editar</a></li>
-                <li><a href="#">Eliminar</a></li>
-                <li><a href="#">Agregar Emp.</a></li>
-            </ul></li>
-        <li><a href="/boss/formp">Proyectos</a>
-            <ul class="submenu">
-                <li><a href="#">Editar</a></li>
-                <li><a href="#">Eliminar</a></li>
-                <li><a href="#">Agregar Emp.</a></li>
-                <li><a href="#">Agregar Tareas</a></li>
-            </ul>
-        </li>
-        <li><a href="/boss/forme">Trabajadores</a>
-            <ul class="submenu">
-                <li><a href="#">Editar</a></li>
-                <li><a href="#">Eliminar</a></li>
-            </ul>
-        </li>
-        <button (click)="logout()">Logout</button>
-    </ul>
-    
-</nav>
+<app-navbar></app-navbar>
+
+<div class="container">
+    <form #taskform="ngForm" (ngSubmit)="project_Component(taskform)" class="form">
+        <div class="form-container">
+             <h1>Agregar Proyecto</h1>  
+             <div class="input-data">
+                 <label>Nombre</label>
+                 <input type="text" name="nombre" [(ngModel)]="project.nombreTarea">
+             </div>
+             <div class="input-data">
+                 <label>Descripcion</label>
+                 <input type="text" name="email" [(ngModel)]="project.descripcion">
+             </div>
+             <div class="lista-drag">
+                 <h4 class="algo">Asignacion de Trabajador</h4>
+                 <div cdkDropList class="example-list2" id="list-workerAsign"[cdkDropListData]="workerAsing" [cdkDropListConnectedTo]="['list-worker']"(cdkDropListDropped)="drop($event)">
+                     <div class="example-box2" *ngFor="let worker of workerAsing" cdkDrag><strong>{{worker.nombre}}</strong></div>
+                 </div>
+             </div>
+             <div class="lista-drag">
+                <h4 class="algo">Asignacion de Tareas</h4>
+                <div cdkDropList class="example-list2" id="list-taskAsign"[cdkDropListData]="taskAsing" [cdkDropListConnectedTo]="['list-task']"(cdkDropListDropped)="drop($event)">
+                    <div class="example-box2" *ngFor="let task of taskAsing" cdkDrag><strong>{{task.nombreTarea}}</strong></div>
+                </div>
+            </div>
+             <button type="submit" id="login-button">Crear</button>
+        </div>
+     </form>
+
+     <div cdkDropList class="example-list" id="list-worker" [cdkDropListData]="workers"[cdkDropListConnectedTo]="['list-workerAsign']"(cdkDropListDropped)="dropWorker($event)">
+        <div class="example-box" *ngFor="let worker of workers" cdkDrag>
+            <div class="example-custom-placeholder">
+                <h2>Nombre: {{worker.nombre}}</h2>
+                <p class="card-email"><strong>Email: {{worker.email}}</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <div cdkDropList class="example-list" id="list-task" [cdkDropListData]="tasks"[cdkDropListConnectedTo]="['list-taskAsign']"(cdkDropListDropped)="dropTask($event)">
+        <div class="example-box" *ngFor="let task of tasks" cdkDrag>
+            <div class="example-custom-placeholder">
+                <h2>Nombre: {{task.nombreTarea}}</h2>
+                <p class="card-email"><strong>escripcion: {{task.descripcion}}</strong></p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -14,11 +14,27 @@ export class TaskService {
     return this.http.get(`${this.url}/obter_tarea_usuario/${localStorage.getItem('_id')}`)
   }
 
+  getTaskId(id){
+    return this.http.get(`${this.url}/obter_tarea/${id}`)
+  }
+
   completeTask(id, body){
     return this.http.put(`${this.url}/completar_tarea/${id}`, body)
   }
 
   addTask(body){
     return this.http.post(`${this.url}/registrar_tarea`, body)
+  }
+
+  getAllTask(){
+    return this.http.get(`${this.url}/obter_tareas`)
+  }
+
+  editTask(id, body){
+    return this.http.put(`${this.url}/editar_tarea/${id}`, body)
+  }
+
+  deleteTask(id){
+    return this.http.delete(`${this.url}/eliminar_tarea/${id}`)
   }
 }

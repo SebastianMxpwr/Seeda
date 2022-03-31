@@ -3,6 +3,8 @@ import { TaskService } from "../../../Services/task.service";
 import { Router } from "@angular/router";
 
 
+
+
 @Component({
   selector: 'app-worker',
   templateUrl: './worker.component.html',
@@ -16,9 +18,6 @@ export class WorkerComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllTaskC()
-    if(!localStorage.getItem('_id') && !localStorage.getItem('jwt')){
-      this.router.navigate(['/'])
-    }
   }
 
   logout(){

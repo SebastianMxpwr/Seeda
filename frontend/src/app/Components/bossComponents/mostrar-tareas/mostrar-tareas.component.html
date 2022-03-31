@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+
+<div class="vacio" *ngIf="tareas.length == 0; else main_content">
+    <h1>No hay tareas por ahora, buen trabajo</h1>
+</div>
+
+
+<ng-template #main_content>
+    <div class="container">
+        <div class="card" *ngFor="let tarea of tareas">
+            <div class="card-title">
+                <p>Nombre: {{tarea.nombreTarea}}</p>
+            </div>
+            <div class="card-desription">
+                <p><strong>Descripcion:</strong><i> {{tarea.descripcion}}</i></p>
+                <p><strong>Asignacion:</strong><i> {{tarea.asignacion}}</i></p>
+            </div>
+            <div class="buttons">
+                <button (click)="editTaskC(tarea._id)">Editar <i class="fa-solid fa-user-pen"></i></button>
+                <button (click)="deleteTaskC(tarea._id)">Borrar <i class="fa-solid fa-eraser"></i></button>
+            </div>
+        </div>
+    </div>
+</ng-template>

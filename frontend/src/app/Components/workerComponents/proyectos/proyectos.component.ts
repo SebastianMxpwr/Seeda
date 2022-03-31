@@ -20,12 +20,6 @@ export class ProyectosComponent implements OnInit {
     
   }
 
-  logout(){
-    localStorage.removeItem('_id')
-    localStorage.removeItem('email')
-    localStorage.removeItem('jwt')
-    this.router.navigate(['/'])
-  }
 
   getProjectWorkerC(){
     const id= localStorage.getItem('_id')

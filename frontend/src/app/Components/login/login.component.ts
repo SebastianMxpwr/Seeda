@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { GeneralService } from "../../Services/general.service";
-
+declare var iziToast: any
 
 
 @Component({
@@ -21,6 +21,11 @@ export class LoginComponent implements OnInit {
   login_Component(data: any){
     if(data.valid){
       this.generalS.login(this.user).subscribe((res: any)=>{
+        iziToast.success({
+          title: 'Exito al logearte',
+          message: `Bienvenido ${res.data.nombre}`,
+          position: 'bottomLeft'
+        });
          localStorage.setItem('_id', res.data._id)
           localStorage.setItem('jwt', res.jwt)
           localStorage.setItem('email', res.data.email)

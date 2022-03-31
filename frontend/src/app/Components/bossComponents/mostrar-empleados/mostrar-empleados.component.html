@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+
+<div class="vacio" *ngIf="workers.length == 0; else main_content">
+    <h1>No hay tareas por ahora, buen trabajo</h1>
+</div>
+
+
+<ng-template #main_content>
+    <div class="container">
+        <div class="card" *ngFor="let worker of workers">
+            <div class="card-title">
+                <p>Nombre: {{worker.nombre}}</p>
+            </div>
+            <div class="card-desription">
+                <p><strong>Email:</strong><i> {{worker.email}}</i></p>
+                <p><strong>Tipo de usuario:</strong><i> {{worker.tipoUsuario}}</i></p>
+                <p><strong>Cargo:</strong><i> {{worker.cargo}}</i></p>
+            </div>
+            <div class="buttons">
+                <button (click)="selecionarEmpleado(worker._id)">Editar <i class="fa-solid fa-user-pen"></i></button>
+                <button (click)="borrarEmpleado(worker._id)">Borrar <i class="fa-solid fa-eraser"></i></button>
+            </div>
+        </div>
+    </div>
+</ng-template>

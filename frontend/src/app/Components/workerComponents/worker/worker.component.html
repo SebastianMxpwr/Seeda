@@ -1,9 +1,5 @@
-<nav id="top-nav">
-    <img id="img-empresa">
-    <a href="/worker">Tareas</a>
-    <a href="/worker/projects">Proyectos</a>
-    <button (click)="logout()">Logout</button>
-</nav>
+<app-navbar-worker></app-navbar-worker>
+
 
 <div class="vacio" *ngIf="tasks.length == 0; else main_content">
     <h1>No hay tareas por ahora, buen trabajo</h1>

@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+
+<div class="vacio" *ngIf="projects.length == 0; else main_content">
+    <h1>No hay proyectos asignados para ti</h1>
+</div>
+
+<ng-template #main_content>
+    <div class="cantainer">
+        <div class="card" *ngFor="let project of projects">
+            <div class="card-title">
+                <h2>Nombre del Proyecto:</h2>
+                <p>{{project.nombre}}</p>
+            </div>
+            <div class="card-description">
+                <label><strong>Descripcion del proyecto:</strong></label>
+                <p>{{project.descripcion}}</p>
+            </div>
+            <h3>Tareas asignadas al proyecto</h3>
+            <div class="card-container">
+                <div class="tasks"*ngFor="let task of tasks" [ngStyle]="{'background': task.completado ? '#F05454' : '#222831' }">
+                    <div class="title" [ngStyle]="{'color': task.completado ? '#222831' : '#DDDDDD' }">
+                        <h3>{{task.nombreTarea}}</h3>
+                    </div>
+                    <div class="description" [ngStyle]="{'color': task.completado ? '#222831' : '#DDDDDD' }">
+                        <p>{{task.descripcion}}</p>
+                    </div>                   
+                </div>
+            </div>
+            <h3>Empleados asignados al proyecto</h3>
+            <div class="card-container">
+                <div class="users" *ngFor="let worker of workers">
+                    <div class="info">
+                        <h4 class="name">{{worker.nombre}}</h4>
+                        <p class="email">{{worker.email}}</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="card-container-buttons">
+                <button>Editar <i class="fa-solid fa-user-pen"></i></button>
+                <button>Borrar <i class="fa-solid fa-eraser"></i></button>
+                <button>Agregar Empleados <i class="fa-solid fa-user-plus"></i></button>
+                <button>Agregar Tareas <i class="fa-solid fa-file-circle-plus"></i></button>
+            </div>          
+        </div>
+    </div>
+</ng-template>
